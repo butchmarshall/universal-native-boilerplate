@@ -12,7 +12,7 @@ import getAction from './getAction';
  */
 export default (NavigationAwareView, pathBase = '') => {
 	const origPathBase = pathBase;
-	const initialPath = (typeof window !== 'undefined' ? window.location.pathname.substr(1) : '').replace(pathBase+"/",'');
+	const initialPath = (typeof window !== 'undefined' ? window.location.pathname.substr(1) : '').replace(new RegExp("^"+pathBase+"/"),'');
 
 	const initialAction = getAction(
 		NavigationAwareView.router,
@@ -74,7 +74,7 @@ export default (NavigationAwareView, pathBase = '') => {
 			const {
 				path,
 			} = NavigationAwareView.router.getPathAndParamsForState(state);
-			const uri = (window.location.pathname.indexOf(path) !== -1)? window.location.pathname : `${pathBase}/${path}`;
+			const uri = `${pathBase}/${path}`;
 			// update url to match route state
 			if (typeof window !== 'undefined' && window.location.pathname !== uri) {
 				window.history.pushState({}, state.title, uri);
