@@ -19,15 +19,15 @@ import reducer from './reducers';
 import ActionTypes from './action_types.json';
 
 const persistConfig = {
-  keyPrefix: 'app:',
-  // don't restore data from these reducers
-  blacklist: [
-    'transient',
-    'nav',
-  ],
+	keyPrefix: 'app:',
+	// don't restore data from these reducers
+	blacklist: [
+		'transient',
+		'nav',
+	],
 };
 if (Platform.OS !== 'web') {
-  persistConfig.storage = storageEngine;
+	persistConfig.storage = storageEngine;
 }
 
 let store;

@@ -1,12 +1,12 @@
 import {
   notFoundKey,
-  AppRoutes,
-} from '../AppRoutes';
+  Routes,
+} from './routes';
 
 const TabRoutes = {};
-for (const key in AppRoutes) {
+for (const key in Routes) {
   if (key !== notFoundKey) {
-    TabRoutes[key] = AppRoutes[key];
+    TabRoutes[key] = Routes[key];
   }
 }
 

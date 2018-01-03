@@ -8,6 +8,6 @@ import {
   AppRegistry,
 } from 'react-native';
 
-import ClientApp from './js/components/ClientApp';
+import ClientApp from './js/containers/ClientApp';
 
 AppRegistry.registerComponent('UniversalNativeBoilerplate', () => ClientApp);

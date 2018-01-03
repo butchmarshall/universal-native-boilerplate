@@ -3,12 +3,12 @@ import {
 } from 'react-navigation';
 
 import TabRoutes from './TabRoutes';
-import sharedTabBarOptions from './sharedTabBarOptions';
+import commonTabBarOptions from './common_tab_bar_options';
 
 const AppNavigator = TabNavigator(TabRoutes, {
   initialRouteName: 'Home',
-  tabBarPosition: 'top',
-  tabBarOptions: sharedTabBarOptions,
+  tabBarPosition: 'bottom',
+  tabBarOptions: commonTabBarOptions,
 });
 
 export default AppNavigator;

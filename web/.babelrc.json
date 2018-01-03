@@ -2,7 +2,8 @@
   "babelrc": false,
   "cacheDirectory": true,
   "plugins": [
-    "array-includes"
+    "array-includes",
+    "transform-decorators-legacy"
   ],
   "presets": [
     [
